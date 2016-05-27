@@ -1,8 +1,7 @@
 angular.module('apiApp')
-  .service('ApiService', function($q, $http) {
+  .service('apiService', function($q, $http) {
 
-
-    this.getStarWarsCharacters = function() {
+    this.getData = function() {
       var defer = $q.defer();
 
       $http.get('http://swapi.co/api/people/')

@@ -1,7 +1,6 @@
 angular.module('apiApp')
-  .controller('ApiController', function($scope, ApiService) {
-
-    ApiService.getStarWarsCharacters()
+  .controller('mainController', function($scope, apiService) {
+    apiService.getData()
       .then(function(results) {
         $scope.items = results;
       });
